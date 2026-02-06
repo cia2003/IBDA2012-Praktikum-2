@@ -1,0 +1,537 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-custom navbar-expand-lg navbar-dark fixed-top">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#" aria-label="Aurelia Vera Home">
+          <p class="logo">Aurelia Vera</p>
+        </a>
+
+        <!-- Mobile Toggle Button -->
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0 me-3">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#hero"
+                ><span>Home</span></a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#products"><span>Products</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#testimonials"
+                ><span>Testimonials</span></a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact"><span>Contact</span></a>
+            </li>
+          </ul>
+
+          <!-- Cart Icon with Badge -->
+          <div class="cart-wrapper me-3">
+            <button class="btn-cart" aria-label="Shopping cart">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                fill="currentColor"
+                class="bi bi-cart"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M3.102 4l1.313 7h8.17l1.313-7zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2"
+                />
+              </svg>
+              <span class="cart-badge">0</span>
+            </button>
+          </div>
+
+          <!-- CTA Button -->
+          <button
+            class="btn btn-outline-success"
+            type="button"
+            data-bs-toggle="modal"
+            data-bs-target="#joinModal"
+          >
+            Join Us
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Header -->
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+      <div class="glass-card" data-aos="fade-up">
+        <h1>Where Elegance Begins</h1>
+        <p class="hero-subtitle">
+          Discover timeless luxury crafted for the discerning individual
+        </p>
+        <button class="btn" data-bs-toggle="modal" data-bs-target="#joinModal">
+          Join Us
+        </button>
+      </div>
+    </section>
+    <!-- Carousel -->
+    <section id="carousel-section">
+      <div
+        id="carouselExampleIndicators"
+        class="carousel slide"
+        data-bs-ride="carousel"
+      >
+        <div class="carousel-indicators">
+          <button
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide-to="0"
+            class="active"
+            aria-current="true"
+            aria-label="Slide 1"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide-to="1"
+            aria-label="Slide 2"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide-to="2"
+            aria-label="Slide 3"
+          ></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="carousel-slide slide-1"></div>
+          </div>
+          <div class="carousel-item">
+            <div class="carousel-slide slide-2"></div>
+          </div>
+          <div class="carousel-item">
+            <div class="carousel-slide slide-3"></div>
+          </div>
+        </div>
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#carouselExampleIndicators"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#carouselExampleIndicators"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </section>
+
+    <!-- Main -->
+    <main>
+      <!-- Products Section -->
+      <article
+        class="products container-fluid justify-content-center"
+        id="products"
+      >
+        <div class="container">
+          <h2 class="section-title">Our Products</h2>
+          <div class="row g-4 product-list container-fluid">
+            <div
+              class="d-flex justify-content-center align-items-center flex-column col-md-4 col-lg-3"
+            >
+              <div class="product-card card border-0 shadow-sm">
+                <div
+                  class="product-img-wrapper d-flex align-items-center justify-content-center"
+                >
+                  <img
+                    src="https://raw.githubusercontent.com/prebuiltui/prebuiltui/main/assets/card/productImageWithoutBg.png"
+                    alt="Product Image"
+                    class="product-img img-fluid"
+                  />
+                </div>
+                <div class="card-body px-3 pt-2 pb-3">
+                  <p class="product-category mb-1">Sports</p>
+
+                  <h6 class="product-title text-truncate">Casual Shoes</h6>
+
+                  <!-- Rating -->
+                  <div class="d-flex align-items-center gap-1 mb-2">
+                    <span class="star filled">★</span>
+                    <span class="star filled">★</span>
+                    <span class="star filled">★</span>
+                    <span class="star filled">★</span>
+                    <span class="star empty">★</span>
+                    <small class="rating-count ms-1">(4)</small>
+                  </div>
+
+                  <!-- Price & Button -->
+                  <div class="d-flex align-items-end justify-content-between">
+                    <p class="product-price mb-0">
+                      $28
+                      <span class="old-price">$40</span>
+                    </p>
+
+                    <button
+                      class="btn product-btn btn-add-cart d-flex align-items-center gap-1"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="16"
+                        height="16"
+                        fill="currentColor"
+                        class="bi bi-cart-plus"
+                        viewBox="0 0 16 16"
+                      >
+                        <path
+                          d="M9 5.5a.5.5 0 0 0-1 0V7H6.5a.5.5 0 0 0 0 1H8v1.5a.5.5 0 0 0 1 0V8h1.5a.5.5 0 0 0 0-1H9z"
+                        />
+                        <path
+                          d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1zm3.915 10L3.102 4h10.796l-1.313 7zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0m7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0"
+                        />
+                      </svg>
+                      Add
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="d-flex justify-content-center align-items-center flex-column col-md-4 col-lg-3"
+            >
+              <div class="product-card card border-0 shadow-sm">
+                <div
+                  class="product-img-wrapper d-flex align-items-center justify-content-center"
+                >
+                  <img
+                    src="https://raw.githubusercontent.com/prebuiltui/prebuiltui/main/assets/card/productImageWithoutBg.png"
+                    alt="Product Image"
+                    class="product-img img-fluid"
+                  />
+                </div>
+                <div class="card-body px-3 pt-2 pb-3">
+                  <p class="product-category mb-1">Sports</p>
+
+                  <h6 class="product-title text-truncate">Casual Shoes</h6>
+
+                  <!-- Rating -->
+                  <div class="d-flex align-items-center gap-1 mb-2">
+                    <span class="star filled">★</span>
+                    <span class="star filled">★</span>
+                    <span class="star filled">★</span>
+                    <span class="star filled">★</span>
+                    <span class="star empty">★</span>
+                    <small class="rating-count ms-1">(4)</small>
+                  </div>
+
+                  <!-- Price & Button -->
+                  <div class="d-flex align-items-end justify-content-between">
+                    <p class="product-price mb-0">
+                      $28
+                      <span class="old-price">$40</span>
+                    </p>
+
+                    <button
+                      class="btn product-btn btn-add-cart d-flex align-items-center gap-1"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="16"
+                        height="16"
+                        fill="currentColor"
+                        class="bi bi-cart-plus"
+                        viewBox="0 0 16 16"
+                      >
+                        <path
+                          d="M9 5.5a.5.5 0 0 0-1 0V7H6.5a.5.5 0 0 0 0 1H8v1.5a.5.5 0 0 0 1 0V8h1.5a.5.5 0 0 0 0-1H9z"
+                        />
+                        <path
+                          d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1zm3.915 10L3.102 4h10.796l-1.313 7zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0m7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0"
+                        />
+                      </svg>
+                      Add
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="d-flex justify-content-center align-items-center flex-column col-md-4 col-lg-3"
+            >
+              <div class="product-card card border-0 shadow-sm">
+                <div
+                  class="product-img-wrapper d-flex align-items-center justify-content-center"
+                >
+                  <img
+                    src="https://raw.githubusercontent.com/prebuiltui/prebuiltui/main/assets/card/productImageWithoutBg.png"
+                    alt="Product Image"
+                    class="product-img img-fluid"
+                  />
+                </div>
+                <div class="card-body px-3 pt-2 pb-3">
+                  <p class="product-category mb-1">Sports</p>
+
+                  <h6 class="product-title text-truncate">Casual Shoes</h6>
+
+                  <!-- Rating -->
+                  <div class="d-flex align-items-center gap-1 mb-2">
+                    <span class="star filled">★</span>
+                    <span class="star filled">★</span>
+                    <span class="star filled">★</span>
+                    <span class="star filled">★</span>
+                    <span class="star empty">★</span>
+                    <small class="rating-count ms-1">(4)</small>
+                  </div>
+
+                  <!-- Price & Button -->
+                  <div class="d-flex align-items-end justify-content-between">
+                    <p class="product-price mb-0">
+                      $28
+                      <span class="old-price">$40</span>
+                    </p>
+
+                    <button
+                      class="btn product-btn d-flex align-items-center gap-1"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="16"
+                        height="16"
+                        fill="currentColor"
+                        class="bi bi-cart-plus"
+                        viewBox="0 0 16 16"
+                      >
+                        <path
+                          d="M9 5.5a.5.5 0 0 0-1 0V7H6.5a.5.5 0 0 0 0 1H8v1.5a.5.5 0 0 0 1 0V8h1.5a.5.5 0 0 0 0-1H9z"
+                        />
+                        <path
+                          d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1zm3.915 10L3.102 4h10.796l-1.313 7zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0m7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0"
+                        />
+                      </svg>
+                      Add
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="d-flex justify-content-center align-items-center flex-column col-md-4 col-lg-3"
+            >
+              <div class="product-card card border-0 shadow-sm">
+                <div
+                  class="product-img-wrapper d-flex align-items-center justify-content-center"
+                >
+                  <img
+                    src="https://raw.githubusercontent.com/prebuiltui/prebuiltui/main/assets/card/productImageWithoutBg.png"
+                    alt="Product Image"
+                    class="product-img img-fluid"
+                  />
+                </div>
+                <div class="card-body px-3 pt-2 pb-3">
+                  <p class="product-category mb-1">Sports</p>
+
+                  <h6 class="product-title text-truncate">Casual Shoes</h6>
+
+                  <!-- Rating -->
+                  <div class="d-flex align-items-center gap-1 mb-2">
+                    <span class="star filled">★</span>
+                    <span class="star filled">★</span>
+                    <span class="star filled">★</span>
+                    <span class="star filled">★</span>
+                    <span class="star empty">★</span>
+                    <small class="rating-count ms-1">(4)</small>
+                  </div>
+
+                  <!-- Price & Button -->
+                  <div class="d-flex align-items-end justify-content-between">
+                    <p class="product-price mb-0">
+                      $28
+                      <span class="old-price">$40</span>
+                    </p>
+
+                    <button
+                      class="btn product-btn d-flex align-items-center gap-1"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="16"
+                        height="16"
+                        fill="currentColor"
+                        class="bi bi-cart-plus"
+                        viewBox="0 0 16 16"
+                      >
+                        <path
+                          d="M9 5.5a.5.5 0 0 0-1 0V7H6.5a.5.5 0 0 0 0 1H8v1.5a.5.5 0 0 0 1 0V8h1.5a.5.5 0 0 0 0-1H9z"
+                        />
+                        <path
+                          d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1zm3.915 10L3.102 4h10.796l-1.313 7zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0m7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0"
+                        />
+                      </svg>
+                      Add
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="text-center mt-5">
+            <button class="btn product-main-btn">View All Products</button>
+          </div>
+        </div>
+      </article>
+
+      <!-- Testimony -->
+      <article class="testimony-section container-fluid px-3" id="testimonials">
+        <div class="container">
+          <h2 class="testimony-title text-center mb-4 section-title">
+            Testimonials
+          </h2>
+          <div class="testimony-container row g-4">
+            <section
+              class="user-testimony-container d-flex justify-content-center align-items-center flex-column col-12 col-md-4"
+            >
+              <div class="user-testimony-image-container mb-3">
+                <img
+                  src="media/logo.png"
+                  alt="test1"
+                  class="user-testimony-image"
+                />
+              </div>
+              <p class="user-testimony-name text-center">Test1</p>
+              <p class="user-testimony-description text-center">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              </p>
+            </section>
+            <section
+              class="user-testimony-container d-flex justify-content-center align-items-center flex-column col-12 col-md-4"
+            >
+              <div class="user-testimony-image-container mb-3">
+                <img
+                  src="media/logo.png"
+                  alt="test1"
+                  class="user-testimony-image"
+                />
+              </div>
+              <p class="user-testimony-name text-center">Test2</p>
+              <p class="user-testimony-description text-center">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              </p>
+            </section>
+            <section
+              class="user-testimony-container d-flex justify-content-center align-items-center flex-column col-12 col-md-4"
+            >
+              <div class="user-testimony-image-container mb-3">
+                <img
+                  src="media/logo.png"
+                  alt="test1"
+                  class="user-testimony-image"
+                />
+              </div>
+              <p class="user-testimony-name text-center">Test3</p>
+              <p class="user-testimony-description text-center">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              </p>
+            </section>
+          </div>
+        </div>
+      </article>
+    </main>
+
+    <!-- Footer -->
+    <footer class="container-fluid px-3 contact-section" id="contact">
+      <div class="container">
+        <h2 class="contact-title text-center mb-4 section-title">Contact Us</h2>
+        <div class="row">
+          <!-- Location Information -->
+          <section class="location-section col-12 col-md-6">
+            <p class="location-title fs-3">our location</p>
+            <iframe
+              class="location-map"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31735.213034442426!2d106.85317118708406!3d-6.143913873139282!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f548d16b9f4b%3A0xc6a42f823c02e4a3!2sUNIQLO%20MALL%20OF%20INDONESIA%20Jakarta%20Utara!5e0!3m2!1sid!2sid!4v1769759814172!5m2!1sid!2sid"
+              width="600"
+              height="450"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+            <p class="location-description">
+              Mall Of Indonesia, Jl. Boulevard Bar. Raya LANTAI GF, RT.18/RW.8,
+              Klp. Gading Bar., Kec. Klp. Gading, Jkt Utara, Daerah Khusus
+              Ibukota Jakarta 14240
+            </p>
+          </section>
+
+          <!-- Form -->
+          <section
+            class="d-flex justify-content-center align-items-center form-section col-12 col-md-6"
+          >
+            <div class="subscribe-form-container p-5">
+              <p class="form-title fs-3">Contact Us for More Information</p>
+              <form action="#" method="POST" class="subscribe-form">
+                <div class="mb-4">
+                  <label for="username" class="form-label fs-4">Username</label>
+                  <input type="text" name="username" class="form-control" />
+                </div>
+                <div class="mb-4">
+                  <label for="email" class="form-label fs-4">Email</label>
+                  <input type="email" name="email" class="form-control" />
+                </div>
+                <button
+                  type="submit"
+                  class="btn btn-primary submit-button d-block mx-auto p-3"
+                >
+                  Submit
+                </button>
+              </form>
+            </div>
+          </section>
+        </div>
+      </div>
+    </footer>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
