@@ -393,7 +393,8 @@ body {
 }
 
 .product-card {
-  max-width: 220px;
+  width: 100%;
+  max-width: 260px;
   background-color: var(--color-ivory);
   border-radius: 12px;
 }
