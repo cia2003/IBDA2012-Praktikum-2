@@ -137,17 +137,19 @@ body {
   border-color: var(--color-soft-gold);
 }
 
-/* NAVBAR LOGO */
-.navbar-logo {
-  height: 50px;
-  width: auto;
-  object-fit: contain;
+.btn.btn-login {
+  border-color: var(--color-soft-gold);
+  background-color: var(--color-soft-gold);
+  color: white;
+  font-weight: 500;
+  transition: var(--transition-smooth);
+  border-radius: 999px;
+  width: 90px;
 }
 
-.navbar-brand {
-  display: flex;
-  align-items: center;
-  padding: 0;
+.btn.btn-login:hover {
+  background-color: var(--color-dark-gold);
+  border-color: var(--color-dark-gold);
 }
 
 /* Main */
@@ -159,7 +161,7 @@ body {
   justify-content: center;
   padding: 2rem;
   background-color: var(--color-charcoal-black);
-  background-image: url("./media/background-header.png");
+  background-image: url("https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8ZmFzaGlvbiUyMHN0b3JlfGVufDB8fDB8fHww");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -179,7 +181,7 @@ body {
 }
 
 .hero h1 {
-  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-size: clamp(1rem, 5vw, 3rem);
   font-weight: 600;
   margin-bottom: 1rem;
   color: var(--color-ivory);
@@ -212,20 +214,25 @@ body {
 .glass-card {
   padding: 3rem 4rem;
   max-width: 700px;
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border-radius: 16px;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+
+  background: rgba(0, 0, 0, 0.642);
+
+  border-radius: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+
+  box-shadow:
+    0 12px 30px rgba(0, 0, 0, 0.35),
+    inset 0 1px 1px rgba(255, 255, 255, 0.25);
+
   position: relative;
   z-index: 1;
   text-align: center;
 }
 
+
 /* CAROUSEL BASE */
 .carousel-slide {
-  height: 60vh;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -233,19 +240,20 @@ body {
   text-align: center;
   color: var(--color-ivory);
   padding: 2rem;
+  margin: 3rem 5rem;
 }
 
 /* INDIVIDUAL SLIDE COLORS */
-.slide-1 {
+.slide-1, .slide-2, .slide-3 {
   background:
     linear-gradient(rgba(30, 30, 30, 0.5), rgba(30, 30, 30, 0.5)),
     var(--color-charcoal-black);
-  background-image: url("media/carrousel-slide/1.png");
+  background-image: url("https://images.unsplash.com/photo-1526178613552-2b45c6c302f0?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fHNhbGV8ZW58MHx8MHx8fDA%3D");
   background-position: center;
   background-size: cover;
 }
 
-.slide-2 {
+/* .slide-2 {
   background:
     linear-gradient(rgba(30, 30, 30, 0.5), rgba(30, 30, 30, 0.5)), #2a2a2a;
   background-image: url("media/carrousel-slide/2.png");
@@ -259,7 +267,7 @@ body {
   background-image: url("media/carrousel-slide/3.png");
   background-position: center;
   background-size: cover;
-}
+} */
 
 /* TEXT STYLING */
 .carousel-slide h2 {
@@ -391,7 +399,8 @@ body {
 }
 
 .product-card {
-  max-width: 220px;
+  width: 100%;
+  max-width: 260px;
   background-color: var(--color-ivory);
   border-radius: 12px;
 }
@@ -526,6 +535,10 @@ body {
   width: 100%;
   height: 100%;
 }
+.user-testimony-name {
+  font-weight: 800;
+  font-size: 18px;
+}
 
 /* Footer */
 footer {
@@ -564,4 +577,66 @@ footer {
 /* Footer */
 .contact-section {
   padding: 6rem 0;
+  background-color: var(--color-light-gray);
+}
+.site-footer {
+  font-size: 13px;
+  color: var(--color-light-gray);
+  background-color: var(--color-charcoal-black);
+}
+
+/* Titles */
+.footer-title {
+  color: var(--color-ivory);
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+/* Lists */
+.footer-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-list li {
+  margin-bottom: 0.5rem;
+}
+
+.footer-list a {
+  color: #9ca3af;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-list a:hover {
+  color: #6366f1;
+}
+
+/* Description */
+.footer-description {
+  max-width: 240px;
+  color: var(--color-light-gray);
+  font-size: 0.9rem;
+}
+
+/* Social icons */
+.footer-socials a {
+  color: #9ca3af;
+  font-size: 1.2rem;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.footer-socials a:hover {
+  color: #6366f1;
+  transform: translateY(-2px);
+}
+
+/* Badge tweak */
+.badge {
+  font-size: 10px;
+  padding: 0.3em 0.5em; 
+}
+.logo.footer-logo{
+  text-decoration: none;
 }
